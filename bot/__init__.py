@@ -55,7 +55,7 @@ if tg_session:
   app = Client(tg_session, api_id, api_hash)
 elif bot_token:
   LOG.info("Bot Mode")
-  app = Client(":memory:", api_id, api_hash, bot_token=bot_token)
+  app = Client(":memory:", api_id, api_hash, bot_token=bot_token, ipv6=True)
 else:
   LOG.error("Set either TELEGRAM_SESSION or BOT_TOKEN variable.")
   sys.exit(1)
